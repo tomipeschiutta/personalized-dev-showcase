@@ -1,3 +1,4 @@
+
 import Navbar from '../components/Navbar';
 import { ArrowDown, BookOpen, Code, GraduationCap, Laptop, Mail, User } from 'lucide-react';
 
@@ -42,21 +43,21 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen w-full">
+    <div className="min-h-screen w-full bg-background">
       <Navbar />
       
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-white z-0" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-background/80 z-0" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 fade-up">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 fade-up text-foreground">
               Tomás Peschiutta
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 fade-up" style={{animationDelay: '0.2s'}}>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 fade-up" style={{animationDelay: '0.2s'}}>
               Técnico Superior en Programación
             </p>
-            <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-12 fade-up" style={{animationDelay: '0.4s'}}>
+            <p className="text-lg text-muted-foreground/80 max-w-2xl mx-auto mb-12 fade-up" style={{animationDelay: '0.4s'}}>
               Especializado en desarrollo de aplicaciones a medida para escritorio y móviles
             </p>
             <button 
@@ -72,53 +73,53 @@ const Index = () => {
       </section>
       
       {/* About Section */}
-      <section id="about" className="py-20 bg-white">
+      <section id="about" className="py-20 bg-secondary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-8">
-              <div className="p-3 rounded-full bg-blue-100">
+              <div className="p-3 rounded-full bg-primary/10">
                 <User className="w-6 h-6 text-primary" />
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Sobre Mí</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Sobre Mí</h2>
           </div>
           
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl">
+              <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl bg-gradient-to-b from-primary/20 p-1">
                 <img 
-                  src="/perfil.jpg" 
+                  src="/lovable-uploads/9e3a8aa0-1385-4391-96e0-3b4d76c9e047.png"
                   alt="Tomás Peschiutta" 
-                  className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
+                  className="object-cover w-full h-full rounded-2xl hover:scale-105 transition-transform duration-500"
                 />
               </div>
               
               <div className="space-y-6">
-                <p className="text-lg text-gray-600">
+                <p className="text-lg text-muted-foreground">
                   Como Técnico Superior en Programación, me especializo en el desarrollo de soluciones de software personalizadas. 
                   Mi enfoque se centra en crear aplicaciones eficientes y escalables que resuelvan problemas reales del negocio.
                 </p>
-                <p className="text-lg text-gray-600">
+                <p className="text-lg text-muted-foreground">
                   Con experiencia en desarrollo móvil y de escritorio, me apasiona crear interfaces intuitivas y funcionales 
                   que mejoren la experiencia del usuario final.
                 </p>
                 
                 <div className="space-y-4 pt-6">
-                  <h3 className="text-xl font-semibold text-gray-800">Aspectos Personales</h3>
+                  <h3 className="text-xl font-semibold text-foreground">Aspectos Personales</h3>
                   <ul className="space-y-3">
-                    <li className="flex items-start gap-2 text-gray-600">
+                    <li className="flex items-start gap-2 text-muted-foreground">
                       <span className="w-2 h-2 mt-2 rounded-full bg-primary flex-shrink-0" />
                       Apasionado por el deporte y la actividad física, lo cual me ayuda a mantener un equilibrio en mi vida profesional
                     </li>
-                    <li className="flex items-start gap-2 text-gray-600">
+                    <li className="flex items-start gap-2 text-muted-foreground">
                       <span className="w-2 h-2 mt-2 rounded-full bg-primary flex-shrink-0" />
                       Disfruto trabajando en equipo, aportando ideas y aprendiendo de mis compañeros
                     </li>
-                    <li className="flex items-start gap-2 text-gray-600">
+                    <li className="flex items-start gap-2 text-muted-foreground">
                       <span className="w-2 h-2 mt-2 rounded-full bg-primary flex-shrink-0" />
                       Busco constantemente nuevos desafíos que me permitan crecer profesionalmente
                     </li>
-                    <li className="flex items-start gap-2 text-gray-600">
+                    <li className="flex items-start gap-2 text-muted-foreground">
                       <span className="w-2 h-2 mt-2 rounded-full bg-primary flex-shrink-0" />
                       Comprometido con el aprendizaje continuo y la mejora de mis habilidades técnicas
                     </li>
