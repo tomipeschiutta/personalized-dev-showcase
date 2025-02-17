@@ -1,7 +1,46 @@
-
 import Navbar from '../components/Navbar';
+import { BookOpen, Code, GraduationCap, Laptop, Mail, User } from 'lucide-react';
 
 const Index = () => {
+  const skills = [
+    { name: 'Flutter', level: 90 },
+    { name: 'Firebase', level: 85 },
+    { name: 'React', level: 80 },
+    { name: 'TypeScript', level: 75 },
+    { name: 'Node.js', level: 70 },
+    { name: 'SQL', level: 85 }
+  ];
+
+  const education = [
+    {
+      title: "Técnico Superior en Programación",
+      institution: "Instituto Superior",
+      year: "2018 - 2021",
+      description: "Especialización en desarrollo de software y aplicaciones"
+    }
+  ];
+
+  const projects = [
+    {
+      title: "App Móvil de Gestión",
+      description: "Aplicación móvil desarrollada con Flutter y Firebase para la gestión empresarial",
+      technologies: ["Flutter", "Firebase", "Dart"],
+      type: "Mobile"
+    },
+    {
+      title: "Sistema de Escritorio",
+      description: "Software de escritorio para control de inventario y facturación",
+      technologies: ["C#", ".NET", "SQL Server"],
+      type: "Desktop"
+    },
+    {
+      title: "Aplicación Web React",
+      description: "Plataforma web responsive para gestión de datos en tiempo real",
+      technologies: ["React", "TypeScript", "Firebase"],
+      type: "Web"
+    }
+  ];
+
   return (
     <div className="min-h-screen w-full">
       <Navbar />
@@ -31,23 +70,130 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Placeholder sections - to be implemented */}
-      <section id="about" className="min-h-screen bg-white">
-        {/* About content will go here */}
+      {/* About Section */}
+      <section id="about" className="py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="flex items-center justify-center mb-8">
+              <div className="p-3 rounded-full bg-blue-100">
+                <User className="w-6 h-6 text-primary" />
+              </div>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">Sobre Mí</h2>
+            <p className="text-lg text-gray-600 mb-6">
+              Como Técnico Superior en Programación, me especializo en el desarrollo de soluciones de software personalizadas. 
+              Mi enfoque se centra en crear aplicaciones eficientes y escalables que resuelvan problemas reales del negocio.
+            </p>
+            <p className="text-lg text-gray-600">
+              Con experiencia en desarrollo móvil y de escritorio, me apasiona crear interfaces intuitivas y funcionales 
+              que mejoren la experiencia del usuario final.
+            </p>
+          </div>
+        </div>
       </section>
       
-      <section id="skills" className="min-h-screen bg-gray-50">
-        {/* Skills content will go here */}
+      {/* Skills Section */}
+      <section id="skills" className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center mb-8">
+              <div className="p-3 rounded-full bg-blue-100">
+                <Code className="w-6 h-6 text-primary" />
+              </div>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Habilidades Técnicas</h2>
+            <p className="text-lg text-gray-600">Tecnologías y herramientas que domino</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {skills.map((skill, index) => (
+              <div 
+                key={skill.name}
+                className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+                style={{animationDelay: `${index * 0.1}s`}}
+              >
+                <h3 className="text-xl font-semibold mb-4">{skill.name}</h3>
+                <div className="w-full bg-gray-200 rounded-full h-2.5">
+                  <div 
+                    className="bg-primary h-2.5 rounded-full transition-all duration-1000 ease-out"
+                    style={{ width: `${skill.level}%` }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
       
-      <section id="education" className="min-h-screen bg-white">
-        {/* Education content will go here */}
+      {/* Education Section */}
+      <section id="education" className="py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center mb-8">
+              <div className="p-3 rounded-full bg-blue-100">
+                <GraduationCap className="w-6 h-6 text-primary" />
+              </div>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Formación Académica</h2>
+            <p className="text-lg text-gray-600">Mi trayectoria educativa</p>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            {education.map((edu, index) => (
+              <div 
+                key={index}
+                className="bg-white rounded-lg p-8 mb-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="flex items-center mb-4">
+                  <BookOpen className="w-5 h-5 text-primary mr-2" />
+                  <h3 className="text-xl font-semibold">{edu.title}</h3>
+                </div>
+                <p className="text-gray-600 mb-2">{edu.institution}</p>
+                <p className="text-gray-500 mb-4">{edu.year}</p>
+                <p className="text-gray-600">{edu.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
       
-      <section id="projects" className="min-h-screen bg-gray-50">
-        {/* Projects content will go here */}
+      {/* Projects Section */}
+      <section id="projects" className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center mb-8">
+              <div className="p-3 rounded-full bg-blue-100">
+                <Laptop className="w-6 h-6 text-primary" />
+              </div>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Proyectos Destacados</h2>
+            <p className="text-lg text-gray-600">Algunos de mis trabajos más relevantes</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {projects.map((project, index) => (
+              <div 
+                key={index}
+                className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
+                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, techIndex) => (
+                      <span 
+                        key={techIndex}
+                        className="px-3 py-1 bg-blue-100 text-primary rounded-full text-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
       
+      {/* Contact Section Placeholder */}
       <section id="contact" className="min-h-screen bg-white">
         {/* Contact content will go here */}
       </section>
