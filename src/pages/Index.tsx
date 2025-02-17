@@ -1,5 +1,5 @@
 import Navbar from '../components/Navbar';
-import { BookOpen, Code, GraduationCap, Laptop, Mail, User } from 'lucide-react';
+import { ArrowDown, BookOpen, Code, GraduationCap, Laptop, Mail, User } from 'lucide-react';
 
 const Index = () => {
   const skills = [
@@ -60,34 +60,72 @@ const Index = () => {
               Especializado en desarrollo de aplicaciones a medida para escritorio y móviles
             </p>
             <button 
-              onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}
-              className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 fade-up"
+              onClick={() => document.getElementById('about')?.scrollIntoView({behavior: 'smooth'})}
+              className="group bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 fade-up flex items-center gap-2 mx-auto"
               style={{animationDelay: '0.6s'}}
             >
-              Contáctame
+              Conocer más de mí
+              <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
             </button>
           </div>
         </div>
       </section>
-
+      
       {/* About Section */}
       <section id="about" className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-8">
               <div className="p-3 rounded-full bg-blue-100">
                 <User className="w-6 h-6 text-primary" />
               </div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">Sobre Mí</h2>
-            <p className="text-lg text-gray-600 mb-6">
-              Como Técnico Superior en Programación, me especializo en el desarrollo de soluciones de software personalizadas. 
-              Mi enfoque se centra en crear aplicaciones eficientes y escalables que resuelvan problemas reales del negocio.
-            </p>
-            <p className="text-lg text-gray-600">
-              Con experiencia en desarrollo móvil y de escritorio, me apasiona crear interfaces intuitivas y funcionales 
-              que mejoren la experiencia del usuario final.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Sobre Mí</h2>
+          </div>
+          
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl">
+                <img 
+                  src="/perfil.jpg" 
+                  alt="Tomás Peschiutta" 
+                  className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              
+              <div className="space-y-6">
+                <p className="text-lg text-gray-600">
+                  Como Técnico Superior en Programación, me especializo en el desarrollo de soluciones de software personalizadas. 
+                  Mi enfoque se centra en crear aplicaciones eficientes y escalables que resuelvan problemas reales del negocio.
+                </p>
+                <p className="text-lg text-gray-600">
+                  Con experiencia en desarrollo móvil y de escritorio, me apasiona crear interfaces intuitivas y funcionales 
+                  que mejoren la experiencia del usuario final.
+                </p>
+                
+                <div className="space-y-4 pt-6">
+                  <h3 className="text-xl font-semibold text-gray-800">Aspectos Personales</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-2 text-gray-600">
+                      <span className="w-2 h-2 mt-2 rounded-full bg-primary flex-shrink-0" />
+                      Apasionado por el deporte y la actividad física, lo cual me ayuda a mantener un equilibrio en mi vida profesional
+                    </li>
+                    <li className="flex items-start gap-2 text-gray-600">
+                      <span className="w-2 h-2 mt-2 rounded-full bg-primary flex-shrink-0" />
+                      Disfruto trabajando en equipo, aportando ideas y aprendiendo de mis compañeros
+                    </li>
+                    <li className="flex items-start gap-2 text-gray-600">
+                      <span className="w-2 h-2 mt-2 rounded-full bg-primary flex-shrink-0" />
+                      Busco constantemente nuevos desafíos que me permitan crecer profesionalmente
+                    </li>
+                    <li className="flex items-start gap-2 text-gray-600">
+                      <span className="w-2 h-2 mt-2 rounded-full bg-primary flex-shrink-0" />
+                      Comprometido con el aprendizaje continuo y la mejora de mis habilidades técnicas
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
